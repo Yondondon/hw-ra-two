@@ -1,0 +1,129 @@
+.wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 50px 15px;
+}
+
+.page_title {
+  text-align: center;
+}
+
+.accordion-body .selection_list_item:last-child {
+  border: none;
+}
+
+.selection_list_item {
+  border-bottom: 1px solid #000;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-body:empty::after {
+  content: 'There are no books in this selection';
+}
+
+.remove_selection_btn {
+  display: block !important;
+  margin: 15px auto 0px;
+}
+
+.selection_control_wrap {
+  display: flex;
+  margin: 20px 0 10px;
+  align-items: center;
+}
+
+.selection_control_item,
+.create_selection_input {
+  padding: 0 20px 10px 0;
+}
+
+.selection_control_item {
+  width: 50%;
+}
+
+.selection_control_item label,
+.create_selection_input label {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.selection_control_item label:after,
+.create_selection_input label:after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background-color: rgba(0, 0, 0, .2);
+  bottom: -2px;
+}
+
+.selection_control_add_btn {
+  margin-top: 23px;
+}
+
+.form_error {
+  position: absolute;
+  font-size: 13px;
+  color: #ff0000;
+}
+
+.create_selection_form {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.create_selection_input {
+  width: 33.3%;
+  padding-right: 20px;
+  margin-bottom: 15px;
+}
+
+.create_selection_input:nth-child(3) {
+  padding-right: 0;
+}
+
+.create_selection_form_add_btn_wrapper {
+  width: 100%;
+}
+
+.create_selection_form_add_btn_wrapper .create_selection_form_add_btn {
+  margin: 0 auto;
+  display: block;
+}
+
+.modal_overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .4);
+  z-index: 100;
+}
+
+.modal_wrap {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 101;
+  background-color: #fff;
+  border: 4px solid orange;
+}
+
+@media(max-width: 500px) {
+  .create_selection_form {
+    flex-direction: column;
+  }
+
+  .create_selection_input {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 5px;
+  }
+}
